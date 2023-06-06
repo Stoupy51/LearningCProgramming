@@ -156,7 +156,7 @@ Ici, on en a plus besoin à la fin de la fonction `main`, on libère donc la mé
 
 ## 3. Tableaux
 ### 3.1 Tableaux statiques
-Un tableau est une suite de valeurs du même type.
+Un tableau est une suite de valeurs du même type, stockées les unes à la suite des autres en mémoire.
 En C, on peut déclarer un tableau statique en lui donnant une taille et en lui affectant des valeurs.
 ```c
 
@@ -181,7 +181,8 @@ for (i = 0; i < taille_tableau; i++) {
 }
 
 ```
-Si on essaie d'accéder à une valeur du tableau qui n'existe pas, on accède à une zone mémoire interdite, ce qui provoque une erreur de segmentation.
+Si on essaie d'accéder à une valeur du tableau qui n'existe pas, on accède à une zone mémoire interdite,
+ce qui provoque une erreur de segmentation.
 
 ### 3.2 Tableaux dynamiques
 En C, on peut allouer un tableau dynamique en utilisant la fonction `malloc`.
@@ -231,6 +232,7 @@ for (i = 0; i < lignes; i++) {
 }
 
 // On affecte des valeurs à la matrice
+matrice[1][2] = 7; // On affecte la valeur 7 à la case de la ligne 1 et de la colonne 2
 ...
 
 // On libère la mémoire allouée pour la matrice
@@ -238,6 +240,7 @@ for (i = 0; i < lignes; i++) {
 	free(matrice[i]);
 }
 free(matrice);
+
 
 ```
 La version statique est plus simple à utiliser mais la version dynamique est plus flexible car elle peut dépendre de variables.
@@ -272,16 +275,18 @@ int *pointeur2 = tableau;
 printf("tableau[0] = %d\n", tableau[0]);
 printf("tableau[0] = %d\n", *tableau);
 
-// On peut accéder à la deuxième valeur du tableau à l'aide de deux notations
+// On peut accéder à la deuxième valeur du tableau à l'aide de trois notations
 printf("tableau[1] = %d\n", tableau[1]);
 printf("tableau[1] = %d\n", *(tableau + 1));
+int *pointeur3 = tableau + 1;
+printf("tableau[1] = %d\n", *pointeur3);
 
 // On en vient à la conclusion que tableau[i] est équivalent à *(tableau + i)
 
 ```
 Lorsqu'on incrémente un pointeur, il pointe vers la valeur suivante du tableau.
 CEPENDANT, cela ne fonctionne que pour des pointeurs typés car le compilateur doit savoir de combien d'octets il doit incrémenter le pointeur pour qu'il pointe vers la valeur suivante.
-Si on incrémente un pointeur non typé, le compilateur ne sait pas de combien d'octets il doit incrémenter le pointeur, il incrémente donc de 1 octet.
+Si on incrémente un pointeur non typé, le compilateur ne sait pas de combien d'octets il doit incrémenter le pointeur, il incrémente donc de 1 octet ou plante selon les compilateurs.
 ```c
 
 // Déclaration d'un tableau statique de 2 entiers
