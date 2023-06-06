@@ -21,8 +21,8 @@ main2: $(SRC_FOLDER)/main2.c
 
 # Nettoyage et restart
 clean:
-	rm $(BIN_FOLDER)/*.exe
-	rm $(OBJ_FOLDER)/*.o
+	rm -f $(BIN_FOLDER)/*.exe
+	rm -f $(OBJ_FOLDER)/*.o
 
 restart: clean all
 

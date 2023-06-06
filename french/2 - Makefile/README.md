@@ -70,8 +70,8 @@ Dans notre cas, on peut supprimer les fichiers `main1.exe` et `main2.exe` avec l
 
 # Suppression de tous les fichiers .exe du dossier courant
 clean:
-	rm *.exe
-	rm *.o
+	rm -f *.exe
+	rm -f *.o
 
 ```
 On supprime aussi les fichiers `.o` qui sont générés par la compilation
@@ -107,8 +107,8 @@ main2.exe: main2.c
 	$(CC) $(COMPILER_FLAGS) -o $@ $^
 
 clean:
-	rm *.exe
-	rm *.o
+	rm -f $(BIN_FOLDER)/*.exe
+	rm -f $(OBJ_FOLDER)/*.o
 
 restart: clean all
 
