@@ -1,0 +1,27 @@
+
+# Définition des variables
+CC = gcc
+COMPILER_FLAGS = -Wall -Wextra -Wpedantic -Werror -O3
+SRC_FOLDER = src
+OBJ_FOLDER = obj
+BIN_FOLDER = bin
+
+
+# Règles
+all: main
+	$(CC) $(COMPILER_FLAGS) -o $(BIN_FOLDER)/main.exe $(OBJ_FOLDER)/main.o
+
+main: $(SRC_FOLDER)/main.c functions
+	$(CC) $(COMPILER_FLAGS) -o $(OBJ_FOLDER)/main.o -c $^
+
+functions: $(SRC_FOLDER)/functions.c
+	$(CC) $(COMPILER_FLAGS) -o $(OBJ_FOLDER)/functions.o -c $^
+
+
+# Nettoyage et restart
+clean:
+	rm -f $(BIN_FOLDER)/*.exe
+	rm -f $(OBJ_FOLDER)/*.o
+
+restart: clean all
+
