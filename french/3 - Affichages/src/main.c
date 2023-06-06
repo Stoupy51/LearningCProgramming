@@ -33,6 +33,7 @@ int main() {
 	printf("");
 
 	// Retourne 0 pour indiquer que le programme s'est exécuté sans erreur
+	printf("\nFin du programme\n");
 	return 0;
 }
 

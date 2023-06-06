@@ -53,6 +53,9 @@ int main() {
 	float_pointer = (float*)&long_pointer[1];
 	double_pointer = (double*)&float_pointer[1];
 
+	// Cette méthode est aussi possible, mais tu ne vas pas l'utiliser hein !
+	char_pointer = (char*)*&*&*&*&*&*&*&*&*&*&*&*&*&*&*&*&*&*&void_pointer;
+
 	// Affectation des valeurs
 	*char_pointer = 'u';
 	*int_pointer = 42;
@@ -114,6 +117,7 @@ int main() {
 	free(matrix);
 
 	// Retourne 0 pour indiquer que le programme s'est exécuté sans erreur
+	printf("\nFin du programme\n");
 	return 0;
 }
 

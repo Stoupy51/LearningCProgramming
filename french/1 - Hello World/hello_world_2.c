@@ -16,6 +16,7 @@ int main(int argc, char* argv[]) {
 	printf("Hello World!\n");
 
 	// Retourne 0 pour indiquer que le programme s'est exécuté sans erreur
+	printf("\nFin du programme\n");
 	return 0;
 }
 

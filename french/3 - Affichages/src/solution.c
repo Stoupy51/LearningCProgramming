@@ -33,6 +33,7 @@ int main() {
 	printf("Mon double vaut %.64f\n", my_double);
 
 	// Retourne 0 pour indiquer que le programme s'est exécuté sans erreur
+	printf("\nFin du programme\n");
 	return 0;
 }
 
