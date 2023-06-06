@@ -1,13 +1,15 @@
 
 # Makefile
 
-## Qu'est-ce qu'un Makefile ?
+## 1. Qu'est-ce qu'un Makefile ?
 Un Makefile est un fichier qui contient des instructions pour compiler un programme.
 Ces instructions sont des commandes shell / bash, qui sont exécutées par le programme `make` dans le terminal.
 Cela permet d'éviter de taper la commande de compilation à chaque fois qu'on veut compiler le programme,
 et de pouvoir compiler plusieurs programmes différents en une seule commande.
 
-## Comment ça marche ?
+
+
+### 1.1 Comment ça marche ?
 Le fichier Makefile contient ce qu'on appelle des `règles`, qui sont de la forme suivante :
 ```makefile
 
@@ -28,7 +30,7 @@ Elles sont optionnelles, et doivent être des noms de règles valides dans le fi
 Elles sont optionnelles, et doivent être des commandes valides dans le terminal, par exemple `gcc ...`,
 elles peuvent être sur plusieurs lignes, mais doivent être précédées d'une tabulation.
 
-## Raccourcis
+### 1.2 Raccourcis
 Il existe des raccourcis pour les règles les plus utilisées, par exemple la règle `all` est exécutée par défaut,
 et exécute toutes les règles qui lui sont dépendantes.
 
@@ -37,7 +39,7 @@ Il existe des variables prédéfinies, qui permettent de simplifier l'écriture 
 - `$^` : liste des dépendances
 - `$<` : nom de la première dépendance (Vraiment utile ?)
 
-## Exemple
+### 1.3 Exemple
 ```makefile
 
 all: main.exe
@@ -52,8 +54,8 @@ La règle `all` est exécutée par défaut, et exécute la règle `main.exe`, qu
 Il est possible d'exécuter seulement une règle en particulier, par exemple la commande
 `make main.exe` exécute uniquement la règle `main.exe`.
 
-## Exercice
-Ajustez le Makefile présent dans ce dossier pour qu'il compile les deux programmes `main1.c` et `main2.c`
+### 1.4 Exercice
+Ajustez le Makefile présent [makefile](makefile) dans ce dossier pour qu'il compile les deux programmes `main1.c` et `main2.c`
 en deux exécutables `main1.exe` et `main2.exe`.
 Ces deux programmes n'affichent rien à l'exécution car ce n'est pas le but de l'exercice.
 Votre makefile doit donc compiler les deux programmes sans erreur, et sans afficher de warning.
@@ -61,8 +63,10 @@ Votre makefile doit donc compiler les deux programmes sans erreur, et sans affic
 Deux solutions sont proposées dans les fichiers `makefile.solution_X`, mais il en existe beaucoup d'autres.
 Regardez les solutions uniquement si vous êtes bloqués ou après avoir essayé.
 
-# Additions
-## Règles supplémentaires
+
+
+## 2. Additions
+### 2.1. Règles supplémentaires
 Une règle souvent utilisée est la règle `clean`, qui permet de supprimer les fichiers générés par la compilation.
 Dans notre cas, on peut supprimer les fichiers `main1.exe` et `main2.exe` avec la règle suivante :
 
@@ -85,7 +89,7 @@ restart: clean all
 
 ```
 
-## Variables
+### 2.2 Variables
 Il est possible de définir des variables dans le Makefile, qui peuvent être utilisées dans les règles.
 Cela permet de ne pas avoir à répéter plusieurs fois la même chose, par exemple :
 - le nom du compilateur
@@ -121,8 +125,10 @@ Les flags de compilation sont des options utiles que je conseille fortement d'ut
 - `-O3` : optimise le code assemblé (niveau 3)
 On ne rentrera pas dans les détails de ces options, vous pouvez les chercher sur internet si vous voulez en savoir plus.
 
-## Makefile bien organisé et générique
-### Compilation en fichiers objets
+
+
+## 3. Makefile bien organisé et générique
+### 3.1 Compilation en fichiers objets
 Parlons maintenant de la compilation de plusieurs fichiers `.c` séparés.
 Le compilateur `gcc` supporte l'option `-c` qui permet de compiler un fichier source `.c` en un fichier objet `.o` distinctement.
 Cela permet de ne pas avoir à recompiler tous les fichiers `.c` à chaque fois qu'on en modifie un seul.
@@ -143,7 +149,7 @@ main1.exe: main1.o
 
 ```
 
-### Makefile à votre disposition
+### 3.2 Makefile à votre disposition
 Pour mieux organiser son environnement de travail, on peut créer un dossier `src` qui contient tous les fichiers `.c` et `.h`,
 un dossier `obj` qui contient tous les fichiers `.o` générés par la compilation, et un dossier `bin` qui contient tous les exécutables.
 On crée des variables pour ces dossiers afin d'obtenir ce magnifique Makefile,
@@ -158,10 +164,10 @@ qui n'a pas besoin d'être modifié pour fonctionner avec n'importe quel projet.
 
 # Conclusion
 - Nous avons vu comment qu'est-ce qu'un Makefile et à quoi il sert
-- Nous avons vu comment écrire un Makefile basique
-- Nous avons vu comment écrire un Makefile plus avancé (variables, règles supplémentaires, raccourcis)
-- Nous avons vu comment compiler un fichier source `.c` séparés en fichier objet `.o` puis en un exécutable
-- Nous avons vu (briévement) comment organiser son environnement de travail
+- Comment écrire un Makefile basique
+- Conception d'un Makefile plus avancé (variables, règles supplémentaires, raccourcis)
+- Compileation d'un fichier source `.c` en fichier objet `.o`, puis en un exécutable.
+- Nous avons vu (briévement) comment organiser son environnement de travail (src, obj, bin)
 
 
 

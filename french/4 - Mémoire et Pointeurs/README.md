@@ -2,7 +2,9 @@
 # Allocation mémoire et pointeurs
 Attention ! Ce chapitre est un peu plus compliqué que les précédents, mais il est très important de le comprendre.
 
-## Qu'est-ce qu'un pointeur ?
+
+
+## 1. Qu'est-ce qu'un pointeur ?
 Un pointeur est une variable qui contient l'adresse d'une autre variable.
 En C, on déclare un pointeur en ajoutant un astérisque `*` devant le nom de la variable.
 Le caractère `&` permet de récupérer l'adresse d'une variable.
@@ -53,8 +55,10 @@ int *b_pointer = NULL;
 ```
 `NULL` est une constante qui représente l'adresse `0x0000000000000000`, elle est définie dans une sous-bibliothèque de `stdio.h`.
 
-## Allocations mémoire
-### Allocation statique
+
+
+## 2. Allocations mémoire
+### 2.1 Allocation statique
 L'allocation statique est la plus simple, elle consiste à déclarer une variable en lui donnant une valeur.
 ```c
 
@@ -99,7 +103,7 @@ Le pointeur `a_pointer` pointe donc vers une zone mémoire qui n'est plus allou�
 Lorsque l'on essaie d'accéder à la valeur de la variable `a` à partir du pointeur `a_pointer`,
 on accède à une zone mémoire interdite, ce qui provoque une erreur de segmentation.
 
-### Allocation dynamique
+### 2.2 Allocation dynamique
 L'allocation dynamique permet de créer des variables qui ne sont pas locales à une fonction mais globales au programme.
 Ces variables sont créées dans une zone mémoire appelée "tas" (heap en anglais).
 Elles ne sont pas supprimées de la mémoire à la fin de la fonction dans laquelle elles sont déclarées.
@@ -148,8 +152,10 @@ Contrairement à la déclaration statique, il faut libérer la mémoire dynamiqu
 Pour cela, on utilise la fonction `free` en lui passant en paramètre le pointeur vers la zone mémoire à libérer.
 Ici, on en a plus besoin à la fin de la fonction `main`, on libère donc la mémoire allouée pour la variable `a` à la fin de la fonction `main`.
 
-## Tableaux
-### Tableaux statiques
+
+
+## 3. Tableaux
+### 3.1 Tableaux statiques
 Un tableau est une suite de valeurs du même type.
 En C, on peut déclarer un tableau statique en lui donnant une taille et en lui affectant des valeurs.
 ```c
@@ -177,7 +183,7 @@ for (i = 0; i < taille_tableau; i++) {
 ```
 Si on essaie d'accéder à une valeur du tableau qui n'existe pas, on accède à une zone mémoire interdite, ce qui provoque une erreur de segmentation.
 
-### Tableaux dynamiques
+### 3.2 Tableaux dynamiques
 En C, on peut allouer un tableau dynamique en utilisant la fonction `malloc`.
 ```c
 
@@ -203,19 +209,19 @@ free(tableau);
 
 ```
 
-### Tableaux à plusieurs dimensions
+### 3.3 Tableaux à plusieurs dimensions
 Imaginons qu'on souhaite créer une matrice de 3 lignes et 4 colonnes.
 On peut créer un tableau à deux dimensions en créant un tableau de tableaux.
 ```c
 
-// Version statique
+///// Version statique
 int matrice[3][4] = {
 	{1, 2, 3, 4},
 	{5, 6, 7, 8},
 	{9, 10, 11, 12}
 };
 
-// Version dynamique
+///// Version dynamique
 int lignes = 3;
 int colonnes = 4;
 int **matrice = malloc(lignes * sizeof(int*));
@@ -250,7 +256,7 @@ for (i = 0; i < lignes; i++) {
 
 ```
 
-### Similitudes entre tableaux et pointeurs
+### 3.4 Similitudes entre tableaux et pointeurs
 En fait en C, un tableau est toujours un pointeur vers la première valeur du tableau.
 Cela signifie que l'on peut utiliser un tableau comme un pointeur et inversement.
 ```c
@@ -312,12 +318,16 @@ printf("*pointeur = %d\n", *(int*)pointeur);
 
 ```
 
-## Exercice
+
+
+## 4. Exercice
 Cela fait beaucoup de théorie, il est temps de passer à la pratique !
-Analysez le fichier `main.c` et son jeu de pointeurs, il crée plusieurs pointeurs à l'aide d'une seule allocation dynamique.
+Analysez le fichier [main.c](src/main.c) et son jeu de pointeurs, il crée plusieurs pointeurs à l'aide d'une seule allocation dynamique.
 Compléter le code pour allouer une matrice de 3 lignes et 4 colonnes avec une seule allocation dynamique.
 
-## realloc(), calloc()
+
+
+## 5. realloc(), calloc()
 Il existe deux autres fonctions pour allouer de la mémoire : `realloc()` et `calloc()`.
 - `realloc()` permet de réallouer de la mémoire à un pointeur déjà alloué, par exemple si on veut augmenter la taille d'un tableau.
 Mais cela n'est pas sans risque, si la mémoire n'est pas disponible, `realloc()` retourne `NULL` et le pointeur n'est pas modifié.
@@ -325,7 +335,9 @@ De plus, si la mémoire n'est pas contigüe, `realloc()` va allouer une nouvelle
 - `calloc()` permet d'allouer de la mémoire et de l'initialiser à 0, c'est l'équivalent de `malloc()` suivi d'un `memset()` à 0.
 En général, `calloc()` est plus lent que `malloc()` car il doit initialiser la mémoire allouée, on ne l'utilsie donc que si on a besoin d'une mémoire initialisée à 0.
 
-## Petit avertissement avant la conclusion
+
+
+## 6. Petit avertissement avant la conclusion
 Lorsqu'on alloue de la mémoire, il faut toujours la libérer, sinon on aura des fuites mémoires et on risque de saturer la mémoire de la machine.
 Autre point important, l'allocation dynamique est souvent mal utilisée et peut être remplacée par des allocations statiques dans la plupart des cas, allocations qui sont plus rapides et plus sûres.
 

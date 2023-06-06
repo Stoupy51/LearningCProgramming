@@ -7,11 +7,12 @@ La différence entre les deux est que la première est une fonction qui ne prend
 et la deuxième est une fonction qui prend deux arguments.
 
 
-## Premier hello world
+
+## 1. Premier hello world
 Nous allons utiliser la fonction `printf` pour afficher "Hello World" à l'écran.
 Le fichier [hello_world_1.c](hello_world_1.c) contient le code source pour ce programme.
 
-### Compilation du programme
+### 1.1 Compilation du programme
 Afin de l'exécuter, il faut compiler le programme à l'aide de la commande `gcc`
 Pour cela, ouvrez un terminal et placez-vous dans le dossier où se trouve le fichier `hello_world_1.c`.
 Une fois qu'on a placé le terminal dans le bon dossier, la syntaxe est la suivante :
@@ -33,7 +34,7 @@ D'autres personnes ne mettent juste rien, mais c'est pas très pratique pour sav
 séparés par des espaces. Ce qui n'est pas le cas ici puisqu'il n'y a qu'un seul fichier source.
 
 
-### Comment ça il veut pas compiler ?
+### 1.2 Comment ça il veut pas compiler ?
 Lors du lancement de la commande de compilation, le compilateur nous gueule dessus, comprenons ensemble pourquoi.
 
 Premièrement, il nous dit 3 choses, mais cela ne veut pas dire qu'il y a 3 erreurs.
@@ -73,7 +74,7 @@ on peut relancer la commande de compilation et aucun message d'erreur ne s'affic
 Mission réussie !
 
 
-### Exécution du programme
+### 1.3 Exécution du programme
 Une fois que le programme est compilé, il suffit de l'exécuter en tapant dans le terminal :
 
 ```bash
@@ -89,7 +90,7 @@ c'est-à-dire taper `he` puis `TAB` pour appuyer sur `ENTER` fonctionne.
 
 
 
-## Deuxième hello world
+## 2. Deuxième hello world
 La deuxième façon de déclarer la fonction `main` est de lui donner deux arguments.
 Ceux-ci sont les suivants :
 - `int argc` : le nombre d'arguments passés au programme lors de son exécution,
@@ -109,7 +110,7 @@ Essayez de modifier la commande de compilation pour compiler le deuxième progra
 
 
 
-## Conclusion
+# Conclusion
 - Nous avons vu comment créer un programme en C qui affiche "Hello World" à l'écran.
 - Nous avons vu deux façons de déclarer la fonction `main` :
 une qui ne prend aucun argument, et une qui en prend deux.

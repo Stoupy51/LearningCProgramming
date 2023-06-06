@@ -1,13 +1,15 @@
 
 # Affichages
 
+
+
 ## 1. Affichage de base
 Dans ce chapitre, nous allons voir comment afficher des informations dans le terminal.
 
 Nous avons pu voir dans le premier chapitre que la fonction `printf` permet d'afficher des informations dans le terminal.
 Nous allons voir comment l'utiliser, et comment afficher des informations plus complexes.
 
-### %d, %s, %c, %ld, %f
+### 1.1 %d, %s, %c, %ld, %f
 La fonction `printf` a pour prototype :
 ```c
 int printf(const char *format, ...);
@@ -32,8 +34,8 @@ Il existe plusieurs caractères spéciaux, qui permettent d'afficher différents
 - `%.64f` : flottant avec 64 chiffres après la virgule (on peut remplacer 64 par un autre nombre)
 et bien d'autres..., vous pouvez les trouver facilement sur internet.
 
-## Exercice
-Complétez le fichier [src/main.c](src/main.c), de façon à ce que le programme affiche :
+### 1.2 Exercice
+Complétez le fichier [main.c](src/main.c), de façon à ce que le programme affiche :
 ```
 Mon entier vaut 42
 Mon caractère vaut 'u'
@@ -45,7 +47,7 @@ Mon double vaut 3.14159265358979311599796346854418516159057617187500000000000000
 Compilez le programme avec la commande `make`, et exécutez-le avec
 la commande `./bin/main.exe` ou `.\bin\main.exe` (sous Windows).
 
-## Problème d'affichage
+### 1.3 Problème d'affichage
 1. Si vous avez essayé de mettre les accents, vous avez sûrement remarqué que le programme n'affiche pas les caractères correctement.
 Cela est dû au fait qu'en C, les caractères sont codés sur un octet, c'est-à-dire qu'ils peuvent prendre 256 valeurs différentes.
 Or, il existe beaucoup plus de caractères que 256, et donc automatiquement, certains caractères comme les accents sont
@@ -62,7 +64,7 @@ Vous utiliserez donc celui que vous voulez, selon vos besoins.
 
 
 
-# Différents flux d'information
+## 2. Différents flux d'information
 Vous avez peut-être déjà entendu parler de `stdout`, `stderr` et `stdin`.
 Si ce n'est pas le cas, pas de panique, on va voir ce que c'est.
 - `stdout` est le flux de sortie standard, c'est-à-dire que c'est là où sont affichées les informations avec `printf`.
@@ -89,7 +91,7 @@ On verra plus tard comment lire des informations de ce flux dans le même chapit
 - Vous savez maintenant afficher des informations dans le terminal avec `printf`.
 - Vous savez utiliser les caractères spéciaux pour afficher des informations plus complexes.
 - Vous comprenez les différences entre `stdout`, `stderr` et `stdin`.
-Vous pouvez changer le code du fichier [src/main.c](src/main.c) pour tester la fonction fprintf si vous voulez.
+Vous pouvez changer le code du fichier [main.c](src/main.c) pour tester la fonction fprintf si vous voulez.
 Ou alors, vous pouvez passer au chapitre suivant, sur l'allocation mémoire et les pointeurs.
 
 
