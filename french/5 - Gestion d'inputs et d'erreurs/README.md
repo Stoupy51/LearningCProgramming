@@ -182,7 +182,7 @@ int main() {
 }
 ```
 
-### 2.1. Exercice
+### 2.2. Exercice
 Complétez le programme [errors.c](src/errors.c) pour qu'il affiche toutes les erreurs possibles des fonctions utilisées.
 L'exercice est simple, mais ce qui compte est la pertinence des messages d'erreurs. Ils doivent être compréhensibles
 afin de vous aider à débugger votre programme.
