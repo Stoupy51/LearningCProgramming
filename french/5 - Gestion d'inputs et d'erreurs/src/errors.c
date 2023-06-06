@@ -28,7 +28,8 @@ int main(int argc, char* argv[]) {
 	}
 
 	// Ouverture d'un fichier inexistant
-	FILE *file = fopen("super_inexistant.uwu", "r");
+	char filename[] = "super_inexistant.uwu";
+	FILE *file = fopen(filename, "r");
 	// TODO : C'est un pointeur, donc on peut le comparer à NULL
 
 	// Mauvaise allocation mémoire (100 000 000 000 octets : 100 Go)
@@ -36,7 +37,7 @@ int main(int argc, char* argv[]) {
 	// TODO
 
 	// Suppression d'un fichier inexistant
-	int code = remove("super_inexistant.uwu");	// TODO : On peut vérifier le code de retour de la fonction remove
+	int code = remove(filename);	// TODO : On peut vérifier le code de retour de la fonction remove
 	// TODO
 
 	// Fermeture d'un fichier déjà fermé

@@ -32,9 +32,10 @@ int main(int argc, char* argv[]) {
 	}
 
 	// Ouverture d'un fichier inexistant
-	FILE *file = fopen("super_inexistant.uwu", "r");
+	char filename[] = "super_inexistant.uwu";
+	FILE *file = fopen(filename, "r");
 	if (file == NULL) {
-		fprintf(stderr, "\nErreur lors de l'ouverture du fichier: %s\n", strerror(errno));
+		fprintf(stderr, "\nErreur lors de l'ouverture du fichier '%s': %s\n", filename, strerror(errno));
 	}
 
 	// Mauvaise allocation mémoire (100 000 000 000 octets : 100 Go)
@@ -44,21 +45,20 @@ int main(int argc, char* argv[]) {
 	}
 
 	// Suppression d'un fichier inexistant
-	int code = remove("super_inexistant.uwu");
+	int code = remove(filename);
 	if (code != 0) {
-		fprintf(stderr, "\nErreur lors de la suppression du fichier: %s\n", strerror(errno));
+		fprintf(stderr, "\nErreur lors de la suppression du fichier '%s': %s\n", filename, strerror(errno));
 	}
-
 
 	// Fermeture d'un fichier déjà fermé
 	code = fclose(file);
 	if (code != 0) {
-		fprintf(stderr, "\nErreur lors de la fermeture du fichier: %s\n", strerror(errno));
+		fprintf(stderr, "\nErreur lors de la fermeture du fichier '%s': %s\n", filename, strerror(errno));
 	}
 
 	// Comparaison de deux chaines de caractères
 	char *str1 = "Hello World!";
-	char *str2 = "Hello Wurld!";
+	char *str2 = "HellooWorld!";
 	code = strcmp(str1, str2);
 	// Attention y'a 3 valeurs de retour possibles
 	if (code != 0) {
