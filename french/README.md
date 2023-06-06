@@ -1,8 +1,12 @@
 
 # Premier programme en C
-# Macros
-# Compilation
 # Makefile
+# Printf en masse
+# Allocation mémoire et pointeurs
+# Création d'un fichier header
+
+
+# Macros
 # scanf
 # linked list
 # struct

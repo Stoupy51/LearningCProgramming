@@ -22,7 +22,13 @@ gcc -o "hello_world_1.exe" "hello_world_1.c"
 
 Dans cette commande, les guillemets sont facultatifs, voici ce que signifie chaque partie :
 - `gcc` est le compilateur : c'est la commande qui permet de compiler un programme écrit en C,
-- `-o` est l'option qui permet de spécifier le nom du fichier exécutable, ici `hello_world_1.exe`,
+
+- `-o` est l'option qui permet de spécifier le nom du fichier exécutable, ici `hello_world_1.exe`.
+Le `.exe` est facultatif, mais je conseille de le mettre pour savoir que c'est un exécutable.
+Certaines personnes mettent `.o` à la place, mais c'est une mauvaise pratique car les fichiers `.o`
+sont des fichiers objets, et non des exécutables.
+D'autres personnes ne mettent juste rien, mais c'est pas très pratique pour savoir que c'est un exécutable ;-;
+
 - `hello_world_1.c` est le nom du fichier source, il peut y avoir plusieurs fichiers sources dans cette partie,
 séparés par des espaces. Ce qui n'est pas le cas ici puisqu'il n'y a qu'un seul fichier source.
 
@@ -112,5 +118,5 @@ une qui ne prend aucun argument, et une qui en prend deux.
 - Nous avons vu comment exécuter un programme en C.
 
 Pour aller plus loin, vous pouvez essayer de modifier le programme pour qu'il affiche "Hello World" deux fois à l'écran.
-Ou bien continuer avec le [chapitre suivant](../2 - Makefile/README.md).
+Ou bien continuer avec le chapitre suivant.
 

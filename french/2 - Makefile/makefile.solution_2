@@ -1,0 +1,14 @@
+
+# Utilisation de la variable $^ qui contient la liste des dépendances
+
+# Non-utilisation de la variable $@ qui contient le nom de la règle
+# car ici les noms des exécutables sont différents des noms des règles
+
+all: part1 part2
+
+part1: main1.c
+	gcc -o main1.exe $^
+
+part2: main2.c
+	gcc -o main2.exe $^
+

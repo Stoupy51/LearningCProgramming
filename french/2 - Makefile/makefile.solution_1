@@ -1,0 +1,12 @@
+
+# Utilisation de la variable automatique $@ qui contient le nom de la cible
+# Utilisation de la variable automatique $< qui contient le nom de la première dépendance
+
+all: main1.exe main2.exe
+
+main1.exe: main1.c
+	gcc -o $@ $^
+
+main2.exe: main2.c
+	gcc -o $@ $^
+
