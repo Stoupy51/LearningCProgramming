@@ -55,7 +55,7 @@ int main(int argc, char* argv[]) {
 
 	// Comparaison de deux chaines de caractères
 	char *str1 = "Hello World!";
-	char *str2 = "Hello Wurld!";
+	char *str2 = "HellooWorld!";
 	code = strcmp(str1, str2);
 	// TODO : attention y'a 3 valeurs de retour possibles
 
