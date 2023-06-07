@@ -8,11 +8,13 @@ BIN_FOLDER = bin
 
 
 # Règles
-all: main1 main2
-	mkdir -p $(BIN_FOLDER)
-	mkdir -p $(OBJ_FOLDER)
+all: folders main1 main2
 	$(CC) $(COMPILER_FLAGS) -o $(BIN_FOLDER)/main1.exe $(OBJ_FOLDER)/main1.o
 	$(CC) $(COMPILER_FLAGS) -o $(BIN_FOLDER)/main2.exe $(OBJ_FOLDER)/main2.o
+
+folders:
+	mkdir -p $(BIN_FOLDER)
+	mkdir -p $(OBJ_FOLDER)
 
 main1: $(SRC_FOLDER)/main1.c
 	$(CC) $(COMPILER_FLAGS) -o $(OBJ_FOLDER)/main1.o -c $^
