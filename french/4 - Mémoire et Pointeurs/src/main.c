@@ -48,7 +48,7 @@ int main() {
 
 	// Autre méthode pour affecter les pointeurs (elle est plus élégante mais c'est exactement le même principe)
 	char_pointer = (char*)void_pointer;
-	int_pointer = (int*)&char_pointer[1];
+	int_pointer = (int*)&char_pointer[1]; // '&' pour récupérer l'adresse de char_pointer[1] (qui est la valeur suivante de char_pointer: [0] pour char_pointer, [1] pour char_pointer + 1)
 	long_pointer = (long*)&int_pointer[1];
 	float_pointer = (float*)&long_pointer[1];
 	double_pointer = (double*)&float_pointer[1];

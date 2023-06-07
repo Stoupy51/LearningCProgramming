@@ -9,6 +9,8 @@ BIN_FOLDER = bin
 
 # Règles
 all: args scanf errors
+	mkdir -p $(BIN_FOLDER)
+	mkdir -p $(OBJ_FOLDER)
 	$(CC) $(COMPILER_FLAGS) -o $(BIN_FOLDER)/args.exe $(OBJ_FOLDER)/args.o
 	$(CC) $(COMPILER_FLAGS) -o $(BIN_FOLDER)/scanf.exe $(OBJ_FOLDER)/scanf.o
 	$(CC) $(COMPILER_FLAGS) -o $(BIN_FOLDER)/errors.exe $(OBJ_FOLDER)/errors.o

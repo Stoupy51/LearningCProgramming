@@ -9,6 +9,8 @@ BIN_FOLDER = bin
 
 # Règles
 all: main1 main2
+	mkdir -p $(BIN_FOLDER)
+	mkdir -p $(OBJ_FOLDER)
 	$(CC) $(COMPILER_FLAGS) -o $(BIN_FOLDER)/main1.exe $(OBJ_FOLDER)/main1.o
 	$(CC) $(COMPILER_FLAGS) -o $(BIN_FOLDER)/main2.exe $(OBJ_FOLDER)/main2.o
 
