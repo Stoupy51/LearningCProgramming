@@ -78,10 +78,10 @@ Mission réussie !
 Une fois que le programme est compilé, il suffit de l'exécuter en tapant dans le terminal :
 
 ```bash
-# Sous système UNIX :
+# Sous système UNIX ou Windows 11 :
 ./hello_world_1.exe
 
-# Sous Windows :
+# Sous Windows 10 (cmd) :
 .\hello_world_1.exe
 ```
 Utile à savoir : l'autocomplétion du nom du fichier fonctionne dans le terminal,
