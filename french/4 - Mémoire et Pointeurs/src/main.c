@@ -41,12 +41,12 @@ int main() {
 
 	// Affectation des pointeurs
 	char_pointer = (char*)void_pointer;
-	int_pointer = (int*)(char_pointer + 1);
-	long_pointer = (long*)(int_pointer + 1);
-	float_pointer = (float*)(long_pointer + 1);
-	double_pointer = (double*)(float_pointer + 1);
+	int_pointer = (int*)(char_pointer + 1);	// On ajoute 1 à l'adresse de char_pointer pour passer à l'adresse suivante (+1 octet étant donné que char_pointer est un pointeur sur un char)
+	long_pointer = (long*)(int_pointer + 1); // On ajoute 1 à l'adresse de int_pointer pour passer à l'adresse suivante (+4 octets étant donné que int_pointer est un pointeur sur un int)
+	float_pointer = (float*)(long_pointer + 1); // On ajoute 1 à l'adresse de long_pointer pour passer à l'adresse suivante (+8 octets étant donné que long_pointer est un pointeur sur un long)
+	double_pointer = (double*)(float_pointer + 1); // On ajoute 1 à l'adresse de float_pointer pour passer à l'adresse suivante (+4 octets étant donné que float_pointer est un pointeur sur un float)
 
-	// Autre méthode pour affecter les pointeurs (elle est plus élégante)
+	// Autre méthode pour affecter les pointeurs (elle est plus élégante mais c'est exactement le même principe)
 	char_pointer = (char*)void_pointer;
 	int_pointer = (int*)&char_pointer[1];
 	long_pointer = (long*)&int_pointer[1];

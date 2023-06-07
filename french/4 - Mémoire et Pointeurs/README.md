@@ -6,7 +6,7 @@ Attention ! Ce chapitre est un peu plus compliqué que les précédents, mais il
 
 ## 1. Qu'est-ce qu'un pointeur ?
 Un pointeur est une variable qui contient l'adresse d'une autre variable.
-En C, on déclare un pointeur en ajoutant un astérisque `*` devant le nom de la variable.
+En C, on déclare un pointeur en ajoutant un astérisque `*` devant le nom de la variable, ainsi 
 Le caractère `&` permet de récupérer l'adresse d'une variable.
 Exemple :
 ```c
@@ -71,6 +71,7 @@ int joli_tableau[] = {1, 2, 3, 4, 5};
 Les variables déclarées de cette manière sont aussi appelées variables "locales" car elles sont déclarées dans une fonction.
 c'est-à-dire qu'elles ne sont accessibles que dans la fonction où elles sont déclarées.
 Elles sont supprimées de la mémoire à la fin de la fonction dans laquelle elles sont déclarées.
+Imaginons donc un programme qui utilise une fonction qui renvoie un pointeur vers une variable locale :
 ```c
 
 // Déclaration d'une fonction qui renvoie un pointeur vers un entier
