@@ -23,11 +23,18 @@ int main(int argc, char* argv[]) {
 		char error_msg[] = "Usage: %s <number> <float> <text>\n";
 		// TODO Afficher un message d'erreur pertinent avec le nom du programme (argv[0])
 
-		// TODO vérifier que le premier argument est bien un entier, le deuxième un flottant et le troisième une chaine de caractères
-		// Càd que les fonctions atoi, atof et strlen ne renvoient pas 0
-
 		// On retire le "unused variable" warning
 		error_msg[0] = error_msg[0];
+
+		// Return -1 pas touche celui là
+		return -1;
+	}
+
+	// TODO vérifier que le premier argument est bien un entier, le deuxième un flottant et le troisième une chaine de caractères
+	// Càd que les fonctions atoi, atof et strlen ne renvoient pas une mauvaise valeur (checkez la doc de ces fonctions)
+	// (0 ou -1 selon les architectures)
+	if (atoi(argv[1]) == -1 || atof(argv[2]) == 0 || strlen(argv[3]) == 0) {
+		fprintf(stderr, "\nLes arguments ne sont pas valides\n");
 	}
 
 	// Ouverture d'un fichier inexistant
@@ -40,15 +47,11 @@ int main(int argc, char* argv[]) {
 	// TODO
 
 	// Suppression d'un fichier inexistant
-	int code = remove(filename);	// TODO : On peut vérifier le code de retour de la fonction remove
-	// TODO
-
-	// Fermeture d'un fichier déjà fermé
-	code = fclose(file);
+	int code = remove(filename);	// On peut vérifier le code de retour de la fonction remove
 	// TODO
 
 	// Libération d'une zone mémoire déjà libérée
-	// TODO (nan je déconne, c'est pas possible, le programme crash avant), free() n'a pas de valeur de retour
+	// (nan je déconne, c'est pas possible, le programme crash avant), free() n'a pas de valeur de retour
 
 	// Comparaison de deux chaines de caractères
 	char *str1 = "Hello World!";

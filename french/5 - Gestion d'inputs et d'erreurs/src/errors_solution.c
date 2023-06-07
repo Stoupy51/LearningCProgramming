@@ -24,11 +24,15 @@ int main(int argc, char* argv[]) {
 		// Afficher un message d'erreur pertinent avec le nom du programme (argv[0])
 		fprintf(stderr, error_msg, argv[0]);
 
-		// vérifier que le premier argument est bien un entier, le deuxième un flottant et le troisième une chaine de caractères
-		// Càd que les fonctions atoi, atof et strlen ne renvoient pas 0
-		if (atoi(argv[1]) == 0 || atof(argv[2]) == 0 || strlen(argv[3]) == 0) {
-			fprintf(stderr, "\nLes arguments ne sont pas valides\n");
-		}
+		// Return -1 pas touche celui là
+		return -1;
+	}
+
+	// vérifier que le premier argument est bien un entier, le deuxième un flottant et le troisième une chaine de caractères
+	// Càd que les fonctions atoi, atof et strlen ne renvoient pas une mauvaise valeur (checkez la doc de ces fonctions)
+	// (0 ou -1 selon les architectures)
+	if (atoi(argv[1]) == -1 || atof(argv[2]) == 0 || strlen(argv[3]) == 0) {
+		fprintf(stderr, "\nLes arguments ne sont pas valides\n");
 	}
 
 	// Ouverture d'un fichier inexistant
@@ -48,12 +52,6 @@ int main(int argc, char* argv[]) {
 	int code = remove(filename);
 	if (code != 0) {
 		fprintf(stderr, "\nErreur lors de la suppression du fichier '%s': %s\n", filename, strerror(errno));
-	}
-
-	// Fermeture d'un fichier déjà fermé
-	code = fclose(file);
-	if (code != 0) {
-		fprintf(stderr, "\nErreur lors de la fermeture du fichier '%s': %s\n", filename, strerror(errno));
 	}
 
 	// Comparaison de deux chaines de caractères
