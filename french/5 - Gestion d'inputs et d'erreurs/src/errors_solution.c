@@ -18,7 +18,7 @@ int main(int argc, char* argv[]) {
 	///// IMPORTANT, Pour l'exemple, on ne retournera pas -1 en cas d'erreur afin de continuer l'exécution du programme /////
 
 	// Vérifier que l'utilisateur a bien passé 3 arguments au programme
-	if (argc != 3) {
+	if (argc != 4) {
 
 		// Afficher un message d'erreur
 		char error_msg[] = "\nUsage: %s <number> <float> <text>\n";
