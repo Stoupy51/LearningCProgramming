@@ -1,41 +1,55 @@
 
-# TODO: Installation de l'environnement de développement
+# Installation de l'environnement de développement
 
-1. Install MSYS2:
-- Go to the MSYS2 website: https://www.msys2.org/
-- Download the installer appropriate for your system (32-bit or 64-bit).
-- Run the installer and follow the installation instructions.
-- When prompted to choose the installation directory, you can keep the default or choose a different location.
-- Close the installer once the installation is complete.
+1. Installez le logiciel MSYS2 :
+- Aller sur le site web de MSYS2 : https://www.msys2.org/
+- Téléchargez l'installeur pour votre système (32-bit ou 64-bit).
+- Exécutez le programme d'installation et suivez les instructions d'installation.
+- Lorsque vous êtes invité à choisir le répertoire d'installation, vous pouvez conserver l'emplacement par défaut ou en choisir un autre. Je conseille de conserver le répertoire par défaut.
+- Fermez le programme d'installation une fois l'installation terminée.
 
-2. Update MSYS2 packages:
-- Open the "MSYS2 MinGW 64-bit" or "MSYS2 MinGW 32-bit" shortcut from the Start menu or the installation directory.
-- In the terminal window that opens, type the following command and press Enter:
-(This command can take a while to complete.)
+
+
+2. Mettre à jour les packages MSYS2 :
+- Ouvrez l'application en recherchant le nom `MSYS2 MSYS`.
+- Dans la fenêtre de terminal qui s'ouvre, tapez la commande suivante et appuyez sur Entrée :
+(Cette commande peut prendre un certain temps).
 ```bash
 pacman -Syu
 ```
-- This command will update the package database and upgrade the installed packages. Follow the prompts if any updates or installations are required.
+- Cette commande met à jour la base de données des packages et met à niveau les packages installés.
+Il est possible que vous devez appuyer sur `Y` pour confirmer la mise à jour des packages.
 
-3. Install GCC and Make:
-- In the same terminal window, type the following command and press Enter:
+
+
+3. Installez GCC and Make :
+- Dans la même fenêtre de terminal, tapez la commande suivante et appuyez sur Entrée :
 ```bash
-pacman -S mingw-w64-ucrt-x86_64-gcc make
+pacman -S gcc make
 ```
-- If you're using a 32-bit system, replace mingw-w64-x86_64-toolchain with mingw-w64-i686-toolchain.
-- This command will install the GCC compiler and Make along with their dependencies. Follow the prompts to proceed with the installation.
+- Cette commande installera le compilateur GCC et Make ainsi que leurs dépendances.
+Suivez les instructions pour procéder à l'installation (genre appuyez sur `Y` pour confirmer)
 
-4. Install VSCode:
-# TODO Extensions
+
+
+4. Installez Visual Studio Code :
+- Cette étape n'est pas obligatoire, mais je vous conseille d'utiliser un vrai
+éditeur de texte pour écrire vos programmes plutôt que le bloc-notes.
+- Téléchargez l'installeur de Visual Studio Code et installez-le.
+- Une fois installé, je vous conseille les deux extensions suivantes :
+  - C/C++ Extension Pack
+  - TODO Tree
+Elles vous permettront de bénéficier de la coloration syntaxique et de l'autocomplétion pour le C/C++.
+
+
 
 5. Variables d'environnement
+TODO
 
 
 
 
 
-## GCC
-## Make
 
 # Premier programme en C
 # Makefile
