@@ -1,6 +1,4 @@
 
-#include <stdio.h>
-
 /**
  * @brief Fonction principale exécutée au lancement du programme
  * Affiche "Hello World!" avec un retour à la ligne
