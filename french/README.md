@@ -1,5 +1,23 @@
 
-# Installation de l'environnement de développement
+# Installation de l'environnement de développement sur Linux
+
+1. Installez GCC et Make :
+```bash
+sudo apt install gcc make
+```
+
+2. Installez Visual Studio Code :
+- Cette étape n'est pas obligatoire, mais je vous conseille d'utiliser un vrai
+éditeur de texte pour écrire vos programmes plutôt que le bloc-notes.
+- Téléchargez l'installeur de Visual Studio Code et installez-le.
+- Une fois installé, je vous conseille les deux extensions suivantes :
+  - C/C++ Extension Pack
+  - TODO Tree
+Elles vous permettront de bénéficier de la coloration syntaxique et de l'autocomplétion pour le C/C++.
+
+
+
+# Installation de l'environnement de développement sur Windows
 
 1. Installez le logiciel MSYS2 :
 - Aller sur le site web de MSYS2 : https://www.msys2.org/
