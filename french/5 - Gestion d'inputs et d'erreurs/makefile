@@ -1,7 +1,7 @@
 
 # Définition des variables
 CC = gcc
-COMPILER_FLAGS = -Wall -Wextra -Wpedantic -Werror -O3
+COMPILER_FLAGS = -Wall -Wextra -Wpedantic -O3 # Pas de Werror pour ce chapitre
 SRC_FOLDER = src
 OBJ_FOLDER = obj
 BIN_FOLDER = bin
