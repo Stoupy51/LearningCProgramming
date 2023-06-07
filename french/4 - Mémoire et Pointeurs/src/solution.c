@@ -48,7 +48,7 @@ int main() {
 
 	// Autre méthode pour affecter les pointeurs (elle est plus élégante)
 	char_pointer = (char*)void_pointer;
-	int_pointer = (int*)&char_pointer[1];
+	int_pointer = (int*)&char_pointer[1]; // '&' pour récupérer l'adresse de char_pointer[1] (qui est la valeur suivante de char_pointer: [0] pour char_pointer, [1] pour char_pointer + 1)
 	long_pointer = (long*)&int_pointer[1];
 	float_pointer = (float*)&long_pointer[1];
 	double_pointer = (double*)&float_pointer[1];
@@ -93,10 +93,10 @@ int main() {
 	printf("Allocation de %zu octets\n", matrix_size);
 	matrix_pointer = malloc(matrix_size);
 
-	// Allocation de mémoire pour les lignes
+	// Allocation de mémoire pour les lignes (Liste de pointeurs vers des tableaux d'entiers)
 	matrix = malloc(sizeof(int*) * lignes); // Cadeau celui-ci
 
-	// Affectation des pointeurs
+	// Affectation des pointeurs (Pour chaque élément de la liste de pointeurs, on affecte l'adresse du début de chaque tableau d'entiers)
 	int i;
 	for (i = 0; i < lignes; i++) {
 		matrix[i] = &matrix_pointer[i * colonnes];

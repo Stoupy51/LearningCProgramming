@@ -46,7 +46,7 @@ all: main.exe
 
 main.exe: main.c
 	gcc -o $@ $^
-	# équivalent à `gcc -o main.exe main.o`
+	# équivalent à `gcc -o main.exe main.c`
 
 ```
 Dans cet exemple, on a une règle `all` qui dépend de la règle `main.exe`, qui dépend elle-même du fichier `main.c`.

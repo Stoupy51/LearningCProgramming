@@ -90,14 +90,14 @@ int main() {
 	size_t matrix_size = 0;
 
 	// Allocation de mémoire pour la matrice
-	matrix_size = 0; // TODO: Calculer la taille de la matrice
+	matrix_size = 0; // TODO: Calculer la taille de la matrice en octets
 	printf("Allocation de %zu octets\n", matrix_size);
 	matrix_pointer = NULL; // TODO: Allouer la mémoire pour la matrice
 
-	// Allocation de mémoire pour les lignes
+	// Allocation de mémoire pour les lignes (Liste de pointeurs vers des tableaux d'entiers)
 	matrix = malloc(sizeof(int*) * lignes); // Cadeau celui-ci
 
-	// Affectation des pointeurs
+	// Affectation des pointeurs (Pour chaque élément de la liste de pointeurs, on affecte l'adresse du début de chaque tableau d'entiers)
 	int i;
 	for (i = 0; i < lignes; i++) {
 		matrix[i] = NULL; // TODO: Affecter les pointeurs. Astuce : '& matrix_pointer[???]' ou 'matrix_pointer + ???'
