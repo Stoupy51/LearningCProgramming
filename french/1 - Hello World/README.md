@@ -18,7 +18,7 @@ Pour cela, ouvrez un terminal et placez-vous dans le dossier où se trouve le fi
 Une fois qu'on a placé le terminal dans le bon dossier, la syntaxe est la suivante :
 
 ```bash
-gcc -o "hello_world_1.exe" "hello_world_1.c"
+gcc -o "hello_world_1.exe" "hello_world_1.c" -Werror
 ```
 
 Dans cette commande, les guillemets sont facultatifs, voici ce que signifie chaque partie :
