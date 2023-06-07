@@ -28,6 +28,7 @@ int main() {
 	// Afficher les valeurs saisies par l'utilisateur
 	printf("Vous avez saisi l'entier %d et la chaine de caracteres '%s'\n\n\n", my_int, my_string);
 
+	///// Exemple de code, vous n'avez rien à faire, juste testez-le et lisez le.
 	///// Objectif: Demander à l'utilisateur de saisir des valeurs jusqu'à ce qu'il saisisse "q"
 	///// Avec cela, vous pouvez experimenter le scanf, par exemple mettre en input "1 2 3 4 5 6 7 8 9 10 q" et voir ce qui se passe
 	char input[64] = {0};
