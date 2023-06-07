@@ -25,6 +25,9 @@ int main(int argc, char* argv[]) {
 
 		// TODO vérifier que le premier argument est bien un entier, le deuxième un flottant et le troisième une chaine de caractères
 		// Càd que les fonctions atoi, atof et strlen ne renvoient pas 0
+
+		// On retire le "unused variable" warning
+		error_msg[0] = error_msg[0];
 	}
 
 	// Ouverture d'un fichier inexistant
@@ -52,6 +55,12 @@ int main(int argc, char* argv[]) {
 	char *str2 = "Hello Wurld!";
 	code = strcmp(str1, str2);
 	// TODO : attention y'a 3 valeurs de retour possibles
+
+	// On retire le "unused variable" warning
+	code = code;
+	ptr = ptr;
+	char *unused = argv[0];
+	unused = unused;
 
 	// Retourne 0 pour indiquer que le programme s'est exécuté sans erreur (même si ce n'est pas le cas x)
 	printf("\nFin du programme\n");

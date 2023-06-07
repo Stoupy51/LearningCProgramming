@@ -23,8 +23,8 @@ int main(int argc, char* argv[]) {
 		// Afficher un message d'exemple
 		fprintf(stderr, "Example: '%s 42 \"Hello World!\"'\n", argv[0]);
 
-		// Retourner 1 pour indiquer que le programme s'est exécuté avec une erreur
-		return 1;
+		// Retourner -1 pour indiquer que le programme s'est exécuté avec une erreur
+		return -1;
 	}
 
 	// Convertir le premier argument en entier
@@ -33,7 +33,7 @@ int main(int argc, char* argv[]) {
 	// Mettre dans une variable le nombre de caractères de la chaine de caractères
 	int my_string_length = 0;	// TODO Remplacer 0 par la valeur calculée
 
-	// Copie de la chaine de caractères dans une variable
+	// Copie de la chaine de caractères dans une variable (Pour introduire un concept)
 	char *my_string = malloc(my_string_length * sizeof(char));
 	memcpy(my_string, argv[2], my_string_length);
 

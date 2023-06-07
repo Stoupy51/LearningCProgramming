@@ -35,6 +35,7 @@ Complétez le début du programme [args.c](src/args.c) pour qu'il affiche correc
 Soit, un entier et une chaîne de caractères. Il est dit dans l'exercice que vous devez copier la chaîne de caractères,
 pour cela, vous devez utiliser la fonction `strlen` du fichier d'en-tête `string.h` pour connaître la taille de la chaîne,
 puis allouer la mémoire nécessaire avec la fonction `malloc` du fichier d'en-tête `stdlib.h`.
+Cela vous introduira unn concept important en C.
 Une fois que votre programme "fonctionne" mais plante lors de l'affichage de la chaines de caractères copiée,
 lisez la suite juste en dessous.
 
@@ -138,7 +139,7 @@ int main() {
 	char *str = malloc(10 * sizeof(char));
 	if (str == NULL) {
 		fprintf(stderr, "Erreur d'allocation de mémoire\n");
-		return 1;
+		return -1;
 	}
 	free(str);
 	return 0;
@@ -156,7 +157,7 @@ int main() {
 	char *str = malloc(10 * sizeof(char));
 	if (str == NULL) {
 		perror("Erreur d'allocation de mémoire");
-		return 1;
+		return -1;
 	}
 	free(str);
 	return 0;
@@ -175,7 +176,7 @@ int main() {
 	char *str = malloc(10 * sizeof(char));
 	if (str == NULL) {
 		fprintf(stderr, "[%s] Erreur d'allocation de mémoire: %s\n", nom_programme, strerror(errno));
-		return 1;
+		return -1;
 	}
 	free(str);
 	return 0;

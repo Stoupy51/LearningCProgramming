@@ -23,8 +23,8 @@ int main(int argc, char* argv[]) {
 		// Afficher un message d'exemple
 		fprintf(stderr, "Example: '%s 42 \"Hello World!\"'\n", argv[0]);
 
-		// Retourner 1 pour indiquer que le programme s'est exécuté avec une erreur
-		return 1;
+		// Retourner -1 pour indiquer que le programme s'est exécuté avec une erreur
+		return -1;
 	}
 
 	// Convertir le premier argument en entier
