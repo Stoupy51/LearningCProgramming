@@ -10,7 +10,7 @@ Nous avons pu voir dans le premier chapitre que la fonction `printf` permet d'af
 Nous allons voir comment l'utiliser, et comment afficher des informations plus complexes.
 
 ### 1.1 %d, %s, %c, %ld, %f
-La fonction `printf` a pour prototype :
+La fonction `printf` a pour prototype de fonction :
 ```c
 int printf(const char *format, ...);
 ```
