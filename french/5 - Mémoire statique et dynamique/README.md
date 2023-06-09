@@ -1,64 +1,11 @@
 
-# Allocation mémoire et pointeurs
+# Allocation mémoire statique et dynamique
 Attention ! Ce chapitre est un peu plus compliqué que les précédents, mais il est très important de le comprendre.
 
 
 
-## 1. Qu'est-ce qu'un pointeur ?
-Un pointeur est une variable qui contient l'adresse d'une autre variable.
-En C, on déclare un pointeur en ajoutant un astérisque `*` devant le nom de la variable, ainsi 
-Le caractère `&` permet de récupérer l'adresse d'une variable.
-Exemple :
-```c
-
-int a = 42;
-int *a_pointer = &a;
-
-```
-Dans cet exemple, la variable `a` contient la valeur `42`.
-La variable `a_pointer` contient l'adresse de la variable `a`.
-On peut accéder à la valeur de la variable `a` en utilisant le pointeur `a_pointer` :
-```c
-
-// Modifier la valeur de la variable a en utilisant le pointeur
-*a_pointer = 21;
-
-// Afficher la valeur de la variable a
-printf("a = %d\n", *a_pointer);
-
-// Afficher l'adresse de la variable a
-printf("a_pointer = 0x%p\n", (void*)a_pointer);
-
-```
-Ici, on utilise le caractère `*` pour accéder à la valeur de la variable `a` à partir du pointeur `a_pointer`.
-
-On utilise `%p` pour afficher l'adresse d'une variable sous la forme `0000000000000000`,
-j'ai pris la liberté d'ajouter un `0x` devant l'adresse pour la rendre plus lisible.
-Le cast en `(void*)` est nécessaire pour éviter un warning du compilateur, il permet de convertir le pointeur en un type `void*`
-qui est un type générique qui peut contenir l'adresse de n'importe quel type de variable.
-
-Sur la plupart des architectures, les pointeurs sont codées sur 64 bits, soit 8 octets.
-C'est-à-dire qu'un pointeur occupe 8 octets en mémoire peu importe le type de la variable pointée (int, char, float, ...).
-
-Il est possible de déclarer un pointeur sans lui donner d'adresse,
-mais il faut faire attention à ne pas l'utiliser avant de lui avoir donné une adresse
-car cela peut provoquer une erreur de segmentation (accès à une zone mémoire interdite).
-```c
-
-// Déclaration d'un pointeur sans lui donner d'adresse
-int *a_pointer;
-
-// Il est préférable d'initialiser le pointeur à NULL pour une meilleure
-// lisibilité et pouvoir vérifier si le pointeur est initialisé
-int *b_pointer = NULL;
-
-```
-`NULL` est une constante qui représente l'adresse `0x0000000000000000`, elle est définie dans une sous-bibliothèque de `stdio.h`.
-
-
-
-## 2. Allocations mémoire
-### 2.1 Allocation statique
+## 1. Allocations mémoire
+### 1.1 Allocation statique
 L'allocation statique est la plus simple, elle consiste à déclarer une variable en lui donnant une valeur.
 ```c
 
@@ -104,7 +51,7 @@ Le pointeur `a_pointer` pointe donc vers une zone mémoire qui n'est plus allou�
 Lorsque l'on essaie d'accéder à la valeur de la variable `a` à partir du pointeur `a_pointer`,
 on accède à une zone mémoire interdite, ce qui provoque une erreur de segmentation.
 
-### 2.2 Allocation dynamique
+### 1.2 Allocation dynamique
 L'allocation dynamique permet de créer des variables qui ne sont pas locales à une fonction mais globales au programme.
 Ces variables sont créées dans une zone mémoire appelée "tas" (heap en anglais).
 Elles ne sont pas supprimées de la mémoire à la fin de la fonction dans laquelle elles sont déclarées.
@@ -155,8 +102,8 @@ Ici, on en a plus besoin à la fin de la fonction `main`, on libère donc la mé
 
 
 
-## 3. Tableaux
-### 3.1 Tableaux statiques
+## 2. Tableaux
+### 2.1 Tableaux statiques
 Un tableau est une suite de valeurs du même type, stockées les unes à la suite des autres en mémoire.
 En C, on peut déclarer un tableau statique en lui donnant une taille et en lui affectant des valeurs.
 ```c
@@ -211,7 +158,7 @@ free(tableau);
 
 ```
 
-### 3.3 Tableaux à plusieurs dimensions
+### 2.3 Tableaux à plusieurs dimensions
 Imaginons qu'on souhaite créer une matrice de 3 lignes et 4 colonnes.
 On peut créer un tableau à deux dimensions en créant un tableau de tableaux.
 ```c
@@ -260,7 +207,7 @@ for (i = 0; i < lignes; i++) {
 
 ```
 
-### 3.4 Similitudes entre tableaux et pointeurs
+### 2.4 Similitudes entre tableaux et pointeurs
 En fait en C, un tableau est toujours un pointeur vers la première valeur du tableau.
 Cela signifie que l'on peut utiliser un tableau comme un pointeur et inversement.
 ```c
@@ -326,14 +273,14 @@ printf("*pointeur = %d\n", *(int*)pointeur);
 
 
 
-## 4. Exercice
+## 3. Exercice
 Cela fait beaucoup de théorie, il est temps de passer à la pratique !
 Analysez le fichier [main.c](src/main.c) et son jeu de pointeurs, il crée plusieurs pointeurs à l'aide d'une seule allocation dynamique.
 Compléter le code pour allouer une matrice de 3 lignes et 4 colonnes avec une seule allocation dynamique.
 
 
 
-## 5. realloc(), calloc()
+## 4. realloc(), calloc()
 Il existe deux autres fonctions pour allouer de la mémoire : `realloc()` et `calloc()`.
 - `realloc()` permet de réallouer de la mémoire à un pointeur déjà alloué, par exemple si on veut augmenter la taille d'un tableau.
 Mais cela n'est pas sans risque, si la mémoire n'est pas disponible, `realloc()` retourne `NULL` et le pointeur n'est pas modifié.
@@ -343,14 +290,14 @@ En général, `calloc()` est plus lent que `malloc()` car il doit initialiser la
 
 
 
-## 6. Petit avertissement avant la conclusion
-Lorsqu'on alloue de la mémoire, il faut toujours la libérer, sinon on aura des fuites mémoires et on risque de saturer la mémoire de la machine.
+## 5. Petit avertissement avant la conclusion
+Lorsqu'on alloue de la mémoire, il faut toujours la libérer, sinon on aura des fuites mémoires
+et on risque de saturer la mémoire de la machine.
 Autre point important, l'allocation dynamique est souvent mal utilisée et peut être remplacée par des allocations statiques dans la plupart des cas, allocations qui sont plus rapides et plus sûres.
 
 
 
 # Conclusion
-- Nous avons vu qu'est-ce qu'un pointeur et comment l'utiliser.
 - Les différents types d'allocation mémoire.
 - Quels sont les avantages et les inconvénients de l'allocation dynamique.
 - Comment allouer de la mémoire à un tableau à une ou plusieurs dimensions.

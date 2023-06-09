@@ -10,21 +10,6 @@
  */
 int main() {
 
-	///// Exemple de pointeur sur un entier
-	// Déclaration d'un entier et d'un pointeur sur un entier
-	int a = 42;
-	int *a_pointer = NULL; // le type de a_pointer est (int*)
-	printf("a_pointer = 0x%p\n", (void*)a_pointer);
-
-	// Affectation de l'adresse de a à a_pointer et affichage
-	a_pointer = &a;
-	printf("a = %d\n", a);
-	printf("a_pointer = 0x%p\n", (void*)a_pointer);
-	printf("*a_pointer = %d\n", *a_pointer);
-	printf("\n");
-
-
-
 	///// Création de pointeurs sur plusieurs types de données
 	// Déclaration des variables
 	size_t size = 0;	// size_t est un type de données pour représenter des tailles en octets
@@ -46,7 +31,7 @@ int main() {
 	float_pointer = (float*)(long_pointer + 1); // On ajoute 1 à l'adresse de long_pointer pour passer à l'adresse suivante (+8 octets étant donné que long_pointer est un pointeur sur un long)
 	double_pointer = (double*)(float_pointer + 1); // On ajoute 1 à l'adresse de float_pointer pour passer à l'adresse suivante (+4 octets étant donné que float_pointer est un pointeur sur un float)
 
-	// Autre méthode pour affecter les pointeurs (elle est plus élégante mais c'est exactement le même principe)
+	// Autre méthode pour affecter les pointeurs (elle est plus élégante)
 	char_pointer = (char*)void_pointer;
 	int_pointer = (int*)&char_pointer[1]; // '&' pour récupérer l'adresse de char_pointer[1] (qui est la valeur suivante de char_pointer: [0] pour char_pointer, [1] pour char_pointer + 1)
 	long_pointer = (long*)&int_pointer[1];
@@ -82,7 +67,6 @@ int main() {
 	///// Le deuxième pointeur pointe vers le deuxième tableau d'entiers (colonnes * 1)
 	///// Le troisième pointeur pointe vers le troisième tableau d'entiers (colonnes * 2)
 	///// etc.
-	///// Les seules choses à modifier sont les lignes avec des TODO
 	// Déclaration des variables
 	int **matrix = NULL, *matrix_pointer = NULL;
 	int lignes = 3;
@@ -90,9 +74,9 @@ int main() {
 	size_t matrix_size = 0;
 
 	// Allocation de mémoire pour la matrice
-	matrix_size = 0; // TODO: Calculer la taille de la matrice en octets
+	matrix_size = sizeof(int) * lignes * colonnes;
 	printf("Allocation de %zu octets\n", matrix_size);
-	matrix_pointer = NULL; // TODO: Allouer la mémoire pour la matrice
+	matrix_pointer = malloc(matrix_size);
 
 	// Allocation de mémoire pour les lignes (Liste de pointeurs vers des tableaux d'entiers)
 	matrix = malloc(sizeof(int*) * lignes); // Cadeau celui-ci
@@ -100,7 +84,7 @@ int main() {
 	// Affectation des pointeurs (Pour chaque élément de la liste de pointeurs, on affecte l'adresse du début de chaque tableau d'entiers)
 	int i;
 	for (i = 0; i < lignes; i++) {
-		matrix[i] = NULL; // TODO: Affecter les pointeurs. Astuce : '& matrix_pointer[???]' ou 'matrix_pointer + ???'
+		matrix[i] = &matrix_pointer[i * colonnes];
 	}
 
 	// Affichage des valeurs de la matrice (Cela sera donc des valeurs aléatoires : les octets dans la mémoire qu'il y avait avant)
