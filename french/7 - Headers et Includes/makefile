@@ -5,21 +5,35 @@ COMPILER_FLAGS = -Wall -Wextra -Wpedantic -Werror -O3
 SRC_FOLDER = src
 OBJ_FOLDER = obj
 BIN_FOLDER = bin
+PROG_FOLDER = programs
 
 
 # Règles
-all: folders main
-	$(CC) $(COMPILER_FLAGS) -o $(BIN_FOLDER)/main.exe $(OBJ_FOLDER)/main.o
+all: folders objects programs
 
 folders:
 	mkdir -p $(BIN_FOLDER)
 	mkdir -p $(OBJ_FOLDER)
 
-main: $(SRC_FOLDER)/main.c functions
-	$(CC) $(COMPILER_FLAGS) -o $(OBJ_FOLDER)/main.o -c $^
+objects: functions functions_solution
+programs: basic_header basic_header_solution
 
-functions: $(SRC_FOLDER)/functions.c
-	$(CC) $(COMPILER_FLAGS) -o $(OBJ_FOLDER)/functions.o -c $^
+
+
+# Objets
+functions:
+	$(CC) $(COMPILER_FLAGS) -o $(OBJ_FOLDER)/$@.o -c $(SRC_FOLDER)/$@.c
+functions_solution:
+	$(CC) $(COMPILER_FLAGS) -o $(OBJ_FOLDER)/$@.o -c $(SRC_FOLDER)/$@.c
+
+
+
+# Programmes
+basic_header: functions
+	$(CC) $(COMPILER_FLAGS) -o $(BIN_FOLDER)/$@.exe $(PROG_FOLDER)/$@.c $(OBJ_FOLDER)/functions.o
+basic_header_solution: functions_solution
+	$(CC) $(COMPILER_FLAGS) -o $(BIN_FOLDER)/$@.exe $(PROG_FOLDER)/basic_header.c $(OBJ_FOLDER)/functions_solution.o
+
 
 
 # Nettoyage et restart
