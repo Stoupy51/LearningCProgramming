@@ -1,6 +1,8 @@
 
 # Affichages
-
+Étant donné que le cours précédent était basé sur les Makefile,
+chacun des chapitres suivants possèdera un Makefile déjà configuré.
+N'hésitez pas à l'utiliser donc !
 
 
 ## 1. Affichage de base
