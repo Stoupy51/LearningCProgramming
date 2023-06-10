@@ -37,7 +37,7 @@ Il existe plusieurs caractères spéciaux, qui permettent d'afficher différents
 et bien d'autres..., vous pouvez les trouver facilement sur internet.
 
 ### 1.2 Exercice
-Complétez le fichier [main.c](src/main.c), de façon à ce que le programme affiche :
+Complétez le fichier [`main.c`](src/main.c), de façon à ce que le programme affiche :
 ```
 Mon entier vaut 42
 Mon caractère vaut 'u'
@@ -93,7 +93,7 @@ On verra plus tard comment lire des informations de ce flux dans le même chapit
 - Vous savez maintenant afficher des informations dans le terminal avec `printf`.
 - Vous savez utiliser les caractères spéciaux pour afficher des informations plus complexes.
 - Vous comprenez les différences entre `stdout`, `stderr` et `stdin`.
-Vous pouvez changer le code du fichier [main.c](src/main.c) pour tester la fonction fprintf si vous voulez.
+Vous pouvez changer le code du fichier [`main.c`](src/main.c) pour tester la fonction fprintf si vous voulez.
 Ou alors, vous pouvez passer au chapitre suivant, sur l'allocation mémoire et les pointeurs.
 
 

@@ -10,7 +10,7 @@ et la deuxième est une fonction qui prend deux arguments.
 
 ## 1. Premier hello world
 Nous allons utiliser la fonction `printf` pour afficher "Hello World" à l'écran.
-Le fichier [hello_world_1.c](hello_world_1.c) contient le code source pour ce programme.
+Le fichier [`hello_world_1.c`](hello_world_1.c) contient le code source pour ce programme.
 
 ### 1.1 Compilation du programme
 Afin de l'exécuter, il faut compiler le programme à l'aide de la commande `gcc`
@@ -102,7 +102,7 @@ alors `argc` vaudra `3` et `argv` sera un tableau de 4 chaînes de caractères :
 - `argv[1]` vaudra `arg1`,
 - `argv[2]` vaudra `arg2`.
 
-Le fichier [hello_world_2.c](hello_world_2.c) contient le code source pour ce programme.
+Le fichier [`hello_world_2.c`](hello_world_2.c) contient le code source pour ce programme.
 Le code est le même que pour le premier programme, sauf que la fonction `main` est déclarée différemment.
 L'include du fichier d'en-tête `stdio.h` est cette fois-ci déjà présent en début de fichier.
 

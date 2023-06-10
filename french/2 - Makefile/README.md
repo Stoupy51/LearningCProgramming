@@ -55,7 +55,7 @@ Il est possible d'exécuter seulement une règle en particulier, par exemple la 
 `make main.exe` exécute uniquement la règle `main.exe`.
 
 ### 1.4 Exercice
-Ajustez le Makefile présent [makefile](makefile) dans ce dossier pour qu'il compile les deux programmes `main1.c` et `main2.c`
+Ajustez le Makefile présent [`makefile`](makefile) dans ce dossier pour qu'il compile les deux programmes `main1.c` et `main2.c`
 en deux exécutables `main1.exe` et `main2.exe`.
 Ces deux programmes n'affichent rien à l'exécution car ce n'est pas le but de l'exercice.
 Votre makefile doit donc compiler les deux programmes sans erreur, et sans afficher de warning.

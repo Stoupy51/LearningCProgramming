@@ -275,7 +275,7 @@ printf("*pointeur = %d\n", *(int*)pointeur);
 
 ## 3. Exercice
 Cela fait beaucoup de théorie, il est temps de passer à la pratique !
-Analysez le fichier [main.c](src/main.c) et son jeu de pointeurs, il crée plusieurs pointeurs à l'aide d'une seule allocation dynamique.
+Analysez le fichier [`main.c`](src/main.c) et son jeu de pointeurs, il crée plusieurs pointeurs à l'aide d'une seule allocation dynamique.
 Compléter le code pour allouer une matrice de 3 lignes et 4 colonnes avec une seule allocation dynamique.
 
 

@@ -31,7 +31,7 @@ La fonction `atoi` permet de convertir une chaîne de caractères en entier.
 Il existe aussi `atof` pour convertir en flottant, et `atol` pour convertir en long.
 
 ### 1.2 Exercice
-Complétez le début du programme [args.c](src/args.c) pour qu'il affiche correctement les deux arguments passés au programme.
+Complétez le début du programme [`args.c`](src/args.c) pour qu'il affiche correctement les deux arguments passés au programme.
 Soit, un entier et une chaîne de caractères. Il est dit dans l'exercice que vous devez copier la chaîne de caractères,
 pour cela, vous devez utiliser la fonction `strlen` du fichier d'en-tête `string.h` pour connaître la taille de la chaîne,
 puis allouer la mémoire nécessaire avec la fonction `malloc` du fichier d'en-tête `stdlib.h`.
@@ -65,7 +65,7 @@ int main() {
 }
 ```
 Elle fait exactement la même chose que le code précédent, mais en une seule ligne, wow !
-Vous pouvez maintenant compléter l'exercice [args.c](src/args.c).
+Vous pouvez maintenant compléter l'exercice [`args.c`](src/args.c).
 
 
 ### 1.4. Saisie de l'utilisateur
@@ -116,7 +116,7 @@ Le format `%9s` permet de lire au maximum 9 caractères, le 10ème étant le car
 Ainsi, si l'utilisateur entre une chaîne de caractères de plus de 9 caractères, cette chaîne sera tronquée !
 
 ### 1.5. Exercice
-Complétez le programme [scanf.c](src/scanf.c) pour qu'il affiche correctement les deux entrées de l'utilisateur.
+Complétez le programme [`scanf.c`](src/scanf.c) pour qu'il affiche correctement les deux entrées de l'utilisateur.
 Vous avez même un petit exemple fonctionnel de programme qui scan des entiers, les ajoute dans une liste,
 et les affiche tant que l'utilisateur n'entre pas 'q' pour quitter.
 Vous pouvez utiliser la fonction `strcmp` du fichier d'en-tête `string.h` pour comparer deux chaînes de caractères,
@@ -184,7 +184,7 @@ int main() {
 ```
 
 ### 2.2. Exercice
-Complétez le programme [errors.c](src/errors.c) pour qu'il affiche toutes les erreurs possibles des fonctions utilisées.
+Complétez le programme [`errors.c`](src/errors.c) pour qu'il affiche toutes les erreurs possibles des fonctions utilisées.
 L'exercice est simple, mais ce qui compte est la pertinence des messages d'erreurs. Ils doivent être compréhensibles
 afin de vous aider à débugger votre programme.
 

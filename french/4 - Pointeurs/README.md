@@ -76,7 +76,7 @@ Pour que la fonction fonctionne, il faut passer les adresses des variables en pa
 Par conséquent, la fonction `swap` doit prendre deux pointeurs en paramètres.
 
 ### 2.2. Exercice 1
-Corrigez la fonction `swap` du fichier [swap.c](src/swap.c) pour qu'elle fonctionne correctement.
+Corrigez la fonction `swap` du fichier [`swap.c`](src/swap.c) pour qu'elle fonctionne correctement.
 
 ### 2.3. Allocation dynamique de mémoire
 En C, il est possible d'allouer de la mémoire à l'exécution du programme.
@@ -100,7 +100,7 @@ Cela sera expliqué plus en détail dans le chapitre suivant.
 
 ### 2.4. Exercice 2
 Écrivez une fonction qui prend en paramètre un entier `x` et qui renvoie un pointeur initialisé avec la valeur de `x`.
-Pour cela, compléter la fonction `create_int` du fichier [create_int.c](src/create_int.c),
+Pour cela, compléter la fonction `create_int` du fichier [`create_int.c`](src/create_int.c),
 ainsi que la fonction `main` pour tester votre fonction.
 
 
