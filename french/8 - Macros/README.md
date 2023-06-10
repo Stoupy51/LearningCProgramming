@@ -211,7 +211,7 @@ ERROR_HANDLE_PTR_RETURN_NULL(ptr, ...)
 
 
 ## 5. Fichier Utils.h cadeau
-Si vous avez réussi les exercices précédents, vous pouvez utiliser les fichiers utils.h et utils.c fournis dans le dossier [`cadeau`](cadeau/utils.h).
+Si vous avez réussi les exercices précédents, vous pouvez utiliser les fichiers utils.h et utils.c fournis dans le dossier [`cadeau`](cadeau/universal_utils.h).
 <br>Ils contiennent des macros et fonctions utiles pour le contrôle d'erreurs, l'affichage de messages, le setup d'un programme, etc.
 <br>Vous pouvez les utiliser dans vos projets mais dans tous les cas, ils seront utilisés dans les prochains chapitres.
 

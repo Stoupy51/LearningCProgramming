@@ -4,7 +4,7 @@
 #include <string.h>
 #include <sys/stat.h>
 
-#include "global_utils.h"
+#include "universal_utils.h"
 
 /**
  * @brief This function initializes the main program by
