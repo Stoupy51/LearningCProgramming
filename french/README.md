@@ -77,8 +77,9 @@ TODO
 # Création d'un fichier header
 # Macros
 
-# Variables globales
-# linked list
+# Variables globales / Niveau de visibilité / Extern
 # struct
+
+# linked list
 
 
