@@ -212,8 +212,19 @@ ERROR_HANDLE_PTR_RETURN_NULL(ptr, ...)
 
 ## 5. Fichier Utils.h cadeau
 Si vous avez réussi les exercices précédents, vous pouvez utiliser les fichiers utils.h et utils.c fournis dans le dossier [`cadeau`](cadeau/utils.h).
+<br>Ils contiennent des macros et fonctions utiles pour le contrôle d'erreurs, l'affichage de messages, le setup d'un programme, etc.
+<br>Vous pouvez les utiliser dans vos projets mais dans tous les cas, ils seront utilisés dans les prochains chapitres.
+
 
 
 # Conclusion
+En résumé, dans ce chapitre, vous avez appris :
+- Qu'est-ce qu'une macro, à quoi ça sert et comment en définir une.
+- L'existence des ANSI Escape Codes et comment les utiliser pour afficher des couleurs dans le terminal.
+- Comment utiliser les macros à nombre variable d'arguments.
+- Comment utiliser les macros conditionnelles.
+- Comment définir des fonctions macros sur plusieurs lignes.
+Direction prochain chapitre : les structures de données en C !
+
 
 

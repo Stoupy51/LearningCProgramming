@@ -76,10 +76,10 @@ TODO
 # Input et gestion d'erreurs
 # Création d'un fichier header
 # Macros
-
-# Variables globales / Niveau de visibilité / Extern
 # struct
 
+
 # linked list
+# Variables globales / Niveau de visibilité / Extern
 
 
