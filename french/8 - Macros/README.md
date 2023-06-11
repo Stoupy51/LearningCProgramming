@@ -4,7 +4,17 @@ Dans ce chapitre, nous allons voir comment définir des macros en C, à quoi ell
 
 
 # <u>Sommaire</u>
-- TODO
+- [1. Définition](#1-définition)
+- [2. Macros de couleur](#2-macros-de-couleur)
+- [3. Fonctions macros](#3-fonctions-macros)
+  - [3.1. Fonctions macros simples](#31-fonctions-macros-simples)
+  - [3.2 Exercice 1](#32-exercice-1)
+- [4. Macros conditionnelles](#4-macros-conditionnelles)
+  - [4.1. Macros conditionnelles simples](#41-macros-conditionnelles-simples)
+  - [4.2. Fonctions macros sur plusieurs lignes](#42-fonctions-macros-sur-plusieurs-lignes)
+  - [4.3. Exercice 2](#43-exercice-2)
+- [5. Fichier Utils.h cadeau](#5-fichier-utilsh-cadeau)
+- [Conclusion](#conclusion)
 
 <br>
 

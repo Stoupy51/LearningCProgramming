@@ -6,7 +6,13 @@ Concentrez-vous bien car les deux prochains chapitres sont les plus importants d
 
 
 # <u>Sommaire</u>
-- TODO
+- [1. Qu'est-ce qu'un pointeur ?](#1-qu'est-ce-qu'un-pointeur-)
+- [2. Exemples d'utilisation des pointeurs](#2-exemples-d'utilisation-des-pointeurs)
+  - [2.1. Permutation de deux variables](#21-permutation-de-deux-variables)
+  - [2.2. Exercice 1](#22-exercice-1)
+  - [2.3. Allocation dynamique de mémoire](#23-allocation-dynamique-de-mémoire)
+  - [2.4. Exercice 2](#24-exercice-2)
+- [Conclusion](#conclusion)
 
 <br>
 

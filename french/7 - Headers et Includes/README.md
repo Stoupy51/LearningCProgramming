@@ -4,8 +4,15 @@ Dans ce cours, nous allons voir comment utiliser les fichiers headers (en-tête)
 
 
 # <u>Sommaire</u>
-- TODO
+- [1. Qu'est-ce qu'un fichier header ?](#1-qu'est-ce-qu'un-fichier-header-)
+- [2. Déclaration et définition](#2-déclaration-et-définition)
+- [3. Les includes](#3-les-includes)
+- [4. Définitions et Compilation séparée](#4-définitions-et-compilation-séparée)
+- [5. Arborescence du projet](#5-arborescence-du-projet)
+- [6. Exercice](#6-exercice)
+- [Conclusion](#conclusion)
 
+<br>
 
 ## 1. Qu'est-ce qu'un fichier header ?
 Un fichier header est un fichier qui contient des déclarations de fonctions, de variables, de constantes, de macros, de structures, etc.

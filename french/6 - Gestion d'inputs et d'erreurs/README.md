@@ -2,8 +2,18 @@
 # Gestion d'inputs et d'erreurs
 Dans ce chapitre, nous allons voir comment gérer les entrées de l'utilisateur et les erreurs.
 
+
 # <u>Sommaire</u>
-- TODO
+- [1. Entrées de l'utilisateur](#1-entrées-de-l'utilisateur)
+  - [1.1. Arguments de la fonction main](#11-arguments-de-la-fonction-main)
+  - [1.2 Exercice](#12-exercice)
+  - [1.3. Chaînes de caractères](#13-chaînes-de-caractères)
+  - [1.4. Saisie de l'utilisateur](#14-saisie-de-l'utilisateur)
+  - [1.5. Exercice](#15-exercice)
+- [2. Gestion d'erreurs](#2-gestion-d'erreurs)
+  - [2.1. Valeurs de retour](#21-valeurs-de-retour)
+  - [2.2. Exercice](#22-exercice)
+- [Conclusion](#conclusion)
 
 <br>
 

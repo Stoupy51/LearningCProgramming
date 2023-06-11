@@ -6,7 +6,12 @@
 
 
 # <u>Sommaire</u>
-- TODO
+- [1. Affichage de base](#1-affichage-de-base)
+  - [1.1 %d, %s, %c, %ld, %f](#11-d-s-c-ld-f)
+  - [1.2 Exercice](#12-exercice)
+  - [1.3 Problème d'affichage](#13-problème-d'affichage)
+- [2. Différents flux d'information](#2-différents-flux-d'information)
+- [Conclusion](#conclusion)
 
 <br>
 

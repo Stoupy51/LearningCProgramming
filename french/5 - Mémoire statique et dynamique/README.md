@@ -2,8 +2,20 @@
 # Allocation mémoire statique et dynamique
 Attention ! Ce chapitre est sûrement le plus compliqué de tous, mais il est très important de le comprendre.
 
+
 # <u>Sommaire</u>
-- TODO
+- [1. Allocations mémoire](#1-allocations-mémoire)
+  - [1.1 Allocation statique](#11-allocation-statique)
+  - [1.2 Allocation dynamique](#12-allocation-dynamique)
+- [2. Tableaux](#2-tableaux)
+  - [2.1 Tableaux statiques](#21-tableaux-statiques)
+  - [2.2 Tableaux dynamiques](#22-tableaux-dynamiques)
+  - [2.3 Tableaux à plusieurs dimensions](#23-tableaux-à-plusieurs-dimensions)
+  - [2.4 Similitudes entre tableaux et pointeurs](#24-similitudes-entre-tableaux-et-pointeurs)
+- [3. Exercice](#3-exercice)
+- [4. realloc(), calloc()](#4-realloc-calloc)
+- [5. Petit avertissement avant la conclusion](#5-petit-avertissement-avant-la-conclusion)
+- [Conclusion](#conclusion)
 
 <br>
 
@@ -148,7 +160,7 @@ Si on essaie d'accéder à une valeur du tableau qui n'existe pas, on accède à
 
 <br>
 
-### 3.2 Tableaux dynamiques
+### 2.2 Tableaux dynamiques
 En C, on peut allouer un tableau dynamique en utilisant la fonction `malloc`.
 
 ```c
