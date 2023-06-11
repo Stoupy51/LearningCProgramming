@@ -37,7 +37,7 @@ int internal_function() {
 
 /**
  * @brief Fonction principale exécutée au lancement du programme
- * Introduction à l'utilisation des headers
+ * Introduction à l'utilisation des macros
  * 
  * @return int
  */

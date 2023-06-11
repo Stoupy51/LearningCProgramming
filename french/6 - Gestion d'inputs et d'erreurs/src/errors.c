@@ -61,6 +61,7 @@ int main(int argc, char* argv[]) {
 	// TODO : attention y'a 3 valeurs de retour possibles
 
 	// On retire le "unused variable" warning
+	file = file;
 	code = code;
 	ptr = ptr;
 	char *unused = argv[0];

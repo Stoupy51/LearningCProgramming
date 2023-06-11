@@ -78,6 +78,9 @@ typedef unsigned char byte;
 	#define ERROR_PRINT(...) {}
 #endif
 
+// Utils for printing prefix
+#define PREFIX_PRINT(print_level) { switch (print_level) { case INFO_LEVEL: INFO_PRINT(""); break; case DEBUG_LEVEL: DEBUG_PRINT(""); break; case WARNING_LEVEL: WARNING_PRINT(""); break; case ERROR_LEVEL: ERROR_PRINT(""); break; default: PRINTER(""); break; } }
+
 // Utils for error handling
 #define ERROR_HANDLE_INT_RETURN_INT(error, ...) { if (error < 0) { ERROR_PRINT(__VA_ARGS__); return error; } }
 #define ERROR_HANDLE_INT_RETURN_NULL(error, ...) { if (error < 0) { ERROR_PRINT(__VA_ARGS__); return NULL; } }

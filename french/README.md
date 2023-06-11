@@ -77,9 +77,11 @@ TODO
 # Création d'un fichier header
 # Macros
 # struct
-
-
 # linked list
+# 10. Ultimate makefile (100% automatique)
+
+
 # Variables globales / Niveau de visibilité / Extern
+
 
 
