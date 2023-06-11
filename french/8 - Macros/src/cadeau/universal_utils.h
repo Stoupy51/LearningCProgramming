@@ -41,6 +41,7 @@ typedef unsigned char byte;
 
 // Utils defines to check debug level
 #define IS_INFO_LEVEL (DEBUG_STATES & INFO_LEVEL)
+#define IS_DEBUG_LEVEL (DEBUG_STATES & DEBUG_LEVEL)
 #define IS_WARNING_LEVEL (DEBUG_STATES & WARNING_LEVEL)
 #define IS_ERROR_LEVEL (DEBUG_STATES & ERROR_LEVEL)
 
