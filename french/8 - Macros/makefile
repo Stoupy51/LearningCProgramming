@@ -15,20 +15,20 @@ folders:
 	mkdir -p $(BIN_FOLDER)
 	mkdir -p $(OBJ_FOLDER)
 
-objects: #functions
+objects: utils
 programs: prints
 
 
 
 # Objets
-#functions:
-#	$(CC) $(COMPILER_FLAGS) -o $(OBJ_FOLDER)/$@.o -c $(SRC_FOLDER)/$@.c
+utils:
+	$(CC) $(COMPILER_FLAGS) -o $(OBJ_FOLDER)/$@.o -c $(SRC_FOLDER)/$@.c
 
 
 
 # Programmes
 prints:
-	$(CC) $(COMPILER_FLAGS) -o $(BIN_FOLDER)/$@.exe $(PROG_FOLDER)/$@.c
+	$(CC) $(COMPILER_FLAGS) -o $(BIN_FOLDER)/$@.exe $(PROG_FOLDER)/$@.c $(OBJ_FOLDER)/utils.o
 
 
 
