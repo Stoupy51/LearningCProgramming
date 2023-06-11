@@ -20,6 +20,8 @@ La différence entre les deux est que la première est une fonction qui ne prend
 Nous allons utiliser la fonction `printf` pour afficher "Hello World" à l'écran.
 <br>Le fichier [`hello_world_1.c`](hello_world_1.c) contient le code source pour ce programme.
 
+<br>
+
 ### 1.1 Compilation du programme
 Afin de l'exécuter, il faut compiler le programme à l'aide de la commande `gcc`
 <br>Pour cela, ouvrez un terminal et placez-vous dans le dossier où se trouve le fichier `hello_world_1.c`.
@@ -43,6 +45,7 @@ séparés par des espaces. Ce qui n'est pas le cas ici puisqu'il n'y a qu'un seu
 
 - `-Werror` est l'option qui permet de transformer les warnings en erreurs, histoire que votre programme ne compile pas si vous avez des warnings.
 
+<br>
 
 ### 1.2 Comment ça il veut pas compiler ?
 Lors du lancement de la commande de compilation, le compilateur nous gueule dessus, comprenons ensemble pourquoi.
@@ -85,6 +88,7 @@ Une fois qu'on a ajouté la ligne `#include <stdio.h>` en début de fichier,
 <br>on peut relancer la commande de compilation et aucun message d'erreur ne s'affiche !
 <br>Mission réussie !
 
+<br>
 
 ### 1.3 Exécution du programme
 Une fois que le programme est compilé, il suffit de l'exécuter en tapant dans le terminal :
@@ -100,7 +104,7 @@ Utile à savoir : l'autocomplétion du nom du fichier fonctionne dans le termina
 <br>il suffit de taper les premières lettres sans mettre `./` ou `.\` et d'appuyer sur la touche `TAB`.
 <br>c'est-à-dire taper `he` puis `TAB` pour appuyer sur `ENTER` fonctionne pour exécuter le programme.
 
-
+<br>
 
 ## 2. Deuxième hello world
 La deuxième façon de déclarer la fonction `main` est de lui donner deux arguments.
@@ -120,7 +124,7 @@ Le fichier [`hello_world_2.c`](hello_world_2.c) contient le code source pour ce 
 
 Essayez de modifier la commande de compilation pour compiler le deuxième programme.
 
-
+<br>
 
 # Conclusion
 - Nous avons vu comment créer un programme en C qui affiche "Hello World" à l'écran.
