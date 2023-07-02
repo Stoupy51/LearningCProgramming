@@ -18,7 +18,7 @@ int* create_int(int value) {
 
 /**
  * @brief Fonction principale exécutée au lancement du programme
- * Elle appelle la fonction swap pour échanger les valeurs de deux variables
+ * Elle appelle la fonction create_int et affiche le résultat
  * 
  * @return int
  */

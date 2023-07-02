@@ -199,7 +199,7 @@ Dans celui-ci, les fichiers sources sont premièrement compilés en fichiers obj
 - Nous avons vu comment qu'est-ce qu'un Makefile et à quoi il sert
 - Comment écrire un Makefile basique
 - Conception d'un Makefile plus avancé (variables, règles supplémentaires, raccourcis)
-- Compileation d'un fichier source `.c` en fichier objet `.o`, puis en un exécutable.
+- Compilation d'un fichier source `.c` en fichier objet `.o`, puis en un exécutable.
 - Nous avons vu (briévement) comment organiser son environnement de travail (src, obj, bin)
 
 
