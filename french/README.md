@@ -62,6 +62,9 @@ Elles vous permettront de bénéficier de la coloration syntaxique et de l'autoc
 
 
 5. Variables d'environnement
+Ajouter les suivantes
+- C:\msys64\mingw64\bin
+- C:\msys64\usr\bin
 TODO
 
 
